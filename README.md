@@ -1,4 +1,4 @@
-# Archlinux-fr24feed
+# Archlinux-fr24feed ver 1.0.44-0
 
 ### Install Flightradar24's Data Feeder on Arch Linux OS on: <br> (1) PC & Laptop: amd64, x86_64, i386  </br> (2) Raspberry PI and other SBC: armhf, armv7 arm64, aarch64, armv8 </br>
 
