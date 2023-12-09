@@ -7,7 +7,7 @@ pkgrel=0
 
 license=('GPL')
 pkgdesc='Flightradar24 Feeder (fr24feed)'
-arch=('x86_64' 'i686' 'armv6h' 'armv7h' 'armv7l' 'armhf' 'arm64' 'aarch64')
+arch=('amd64' 'x86_64' 'i386' 'i686' 'armhf' 'arm64' 'aarch64' 'armv6h' 'armv7h' 'armv7l' 'armv8')
 url='https://www.flightradar24.com/'
 depends=('bash')
 
