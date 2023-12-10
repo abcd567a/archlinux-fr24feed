@@ -9,7 +9,7 @@ license=('GPL')
 pkgdesc='Flightradar24 Feeder (fr24feed)'
 arch=('amd64' 'x86_64' 'i386' 'i686' 'armhf' 'arm64' 'aarch64' 'armv6h' 'armv7h' 'armv7l' 'armv8')
 url='https://www.flightradar24.com/'
-depends=('bash')
+makedepends=('fakeroot')
 
 install=fr24feed.install
 source=('init-functions')
