@@ -2,8 +2,11 @@
 
 ### Install Flightradar24's Data Feeder on Arch Linux OS on: <br> (1) PC & Laptop: amd64, x86_64, i386  </br> (2) Raspberry PI and other SBC: armhf, armv7 arm64, aarch64, armv8 </br>
 
-### Issue following 3 commands, and fr24feed will be installed on your Computer / Pi </br>
+### Issue following 4 commands, and fr24feed will be installed on your Computer / Pi </br>
 
+```
+sudo pacman -S --needed git fakeroot
+```
 ```
 git clone https://github.com/abcd567a/archlinux-fr24feed
 ```
