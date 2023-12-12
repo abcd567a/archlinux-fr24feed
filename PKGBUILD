@@ -1,6 +1,6 @@
 #Contributor: abcd567
-# Maintainer: abcd567 
-# 
+# Maintainer: abcd567
+#
 pkgname=fr24feed
 pkgver=1.0.44
 pkgrel=0
@@ -27,19 +27,11 @@ sha256sums_armv6h=('SKIP')
 sha256sums_armv7h=('SKIP')
 sha256sums_aarch64=('SKIP')
 
-prepare() {
-  tar -xf data.tar.gz
-}
 
 package() {
-  install -Dm755  ${srcdir}/usr/bin/fr24feed  ${pkgdir}/usr/bin/fr24feed
-  install -Dm755  ${srcdir}/usr/bin/fr24feed-status  ${pkgdir}/usr/bin/fr24feed-status
-  install -Dm644  ${srcdir}/etc/fr24feed.ini ${pkgdir}/etc/fr24feed.ini
-  install -Dm644  ${srcdir}/etc/systemd/system/fr24feed.service ${pkgdir}/etc/systemd/system/fr24feed.service
+  bsdtar -xf data.tar.gz -C "$pkgdir/"
+  rm -rf $pkgdir/etc/udev/rules.d/rtl-sdr.rules
   sed -i '/install_dump1090.sh/d' ${pkgdir}/etc/systemd/system/fr24feed.service
-  install -Dm755  ${srcdir}/usr/lib/fr24/create_missing_directories.sh ${pkgdir}/usr/lib/fr24/create_missing_directories.sh  
-  install -Dm755  ${srcdir}/usr/lib/fr24/unregister_kernel_modules.sh ${pkgdir}/usr/lib/fr24/unregister_kernel_modules.sh
   install -Dm755  ${srcdir}/init-functions ${pkgdir}/usr/lib/fr24/init-functions
   sed -i 's/lib\/lsb\/init-functions/usr\/lib\/fr24\/init-functions/' ${pkgdir}/usr/bin/fr24feed-status
 }
-
