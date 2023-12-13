@@ -1,6 +1,8 @@
 post_install() {
   useradd --system fr24
+  chown fr24 /etc/fr24feed.ini
   systemctl enable fr24feed
+  
   echo -e "\e[1;95m  Installation of fr24feed Completed.... \e[0;39m"
   echo -e "\e[1;32m  Start signup and configuration of fr24feed by running following command: \e[0;39m"
   echo -e "\e[1;32m      sudo fr24feed --signup \e[0;39m"
