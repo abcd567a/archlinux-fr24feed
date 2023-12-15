@@ -7,3 +7,9 @@ post_install() {
   echo -e "\e[1;32m  Start signup and configuration of fr24feed by running following command: \e[0;39m"
   echo -e "\e[1;32m      sudo fr24feed --signup \e[0;39m"
 }  
+
+post_remove() {
+  systemctl daemon-reload
+  systemctl stop fr24feed
+  userdel fr24
+}
