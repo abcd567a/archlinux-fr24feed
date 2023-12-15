@@ -27,6 +27,7 @@ sha256sums_armv6h=('SKIP')
 sha256sums_armv7h=('SKIP')
 sha256sums_aarch64=('SKIP')
 
+backup=(etc/fr24feed.ini)
 
 package() {
   bsdtar -xf data.tar.gz -C "$pkgdir/"
